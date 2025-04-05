@@ -15,16 +15,17 @@ const MAIN_CSS: Asset = asset!("/assets/main.css");
 #[component]
 pub fn App() -> Element {
     rsx! {
-      document::Stylesheet { href: MAIN_CSS }
-      Router::<router::Route> {}
+        Title {  }
+        // document::Stylesheet { href: MAIN_CSS }
+        // Router::<router::Route> {}
     }
 }
 
 #[component]
 fn Title() -> Element {
     rsx! {
-      div { id: "title",
-        h1 { "HotDog  🌭" }
-      }
+        div { id: "title",
+            h1 { "HotDog  🌭" }
+        }
     }
 }

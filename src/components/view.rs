@@ -15,21 +15,21 @@ pub fn DogView() -> Element {
     });
 
     rsx! {
-      div { id: "dogview",
-        img { src: img_src.cloned().unwrap_or_default() }
-      }
-      div { id: "buttons",
-        button { onclick: move |_| img_src.restart(), id: "skip", "skip" }
-        button {
-          onclick: move |_| async move {
-              let current = img_src.cloned().unwrap();
-              img_src.restart();
-              _ = backend::save_dog(current).await;
-          },
-          id: "save",
-          "save!"
+        div { id: "dogview",
+            img { src: img_src.cloned().unwrap_or_default() }
         }
-      }
+        div { id: "buttons",
+            button { onclick: move |_| img_src.restart(), id: "skip", "skip" }
+            button {
+                onclick: move |_| async move {
+                    let current = img_src.cloned().unwrap();
+                    img_src.restart();
+                    _ = backend::save_dog(current).await;
+                },
+                id: "save",
+                "save!"
+            }
+        }
     }
 }
 

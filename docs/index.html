@@ -1,55 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Not Found</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 5rem;
-            margin: 0;
-        }
-        p {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-        .icon {
-            width: 200px;
-            height: 200px;
-        }
-        a {
-            color: #f39c12;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>404</h1>
-        <p>Oops! Page not found.</p>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-            <image href="your-icon.svg" width="100%" height="100%" />
-        </svg>
-        <p><a href="/">Go back home</a></p>
-    </div>
-</body>
+<html>
+  <head>
+    <title>hot_dog</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+  <link rel="preload" as="script" href="/./assets/hot_dog-da722ee3b102254c.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/./assets/hot_dog_bg-3a42ed648b44ed2e.wasm" crossorigin></head>
+  <body>
+    <div id="main"></div>
+  <script>
+            // We can't use a module script here because we need to start the script immediately when streaming
+            import("/./assets/hot_dog-da722ee3b102254c.js").then(
+                ({ default: init }) => {
+                init("/./assets/hot_dog_bg-3a42ed648b44ed2e.wasm").then((wasm) => {
+                    if (wasm.__wbindgen_start == undefined) {
+                    wasm.main();
+                    }
+                });
+                }
+            );
+            </script>
+            
+            </body>
 </html>

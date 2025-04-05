@@ -1,5 +1,13 @@
 [application]
+
+# App name
 name = "hot_dog"
+
+# `build` & `serve` output path
+out_dir = "dist"
+
+# The static resource path
+asset_dir = "public"
 
 [bundle]
 identifier = "com.dioxuslabs"
